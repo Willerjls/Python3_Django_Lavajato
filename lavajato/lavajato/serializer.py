@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from lavajato.models import Cliente, Veiculo, Venda
+from lavajato.models import Cliente, Veiculo
 
 
 class ClienteSerializer(serializers.ModelSerializer):
@@ -12,10 +12,3 @@ class VeiculoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Veiculo
         fields = '__all__'
-
-
-class VendaSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Venda
-        fields = '__all__'
-

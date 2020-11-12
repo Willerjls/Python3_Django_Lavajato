@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from lavajato.models import Cliente, Veiculo, Venda
-from lavajato.serializer import ClienteSerializer, VeiculoSerializer, VendaSerializer
+from lavajato.models import Cliente, Veiculo
+from lavajato.serializer import ClienteSerializer, VeiculoSerializer
 
 
 class ClientesViewSet(viewsets.ModelViewSet):
@@ -11,8 +11,3 @@ class ClientesViewSet(viewsets.ModelViewSet):
 class VeiculosViewSets(viewsets.ModelViewSet):
     queryset = Veiculo.objects.all()
     serializer_class = VeiculoSerializer
-
-
-class VendaViewSets(viewsets.ModelViewSet):
-    queryset = Venda.objects.all()
-    serializer_class = VendaSerializer
