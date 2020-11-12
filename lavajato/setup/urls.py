@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from lavajato.views import ClientesViewSet, VeiculosViewSets
+from lavajato.views import ClientesViewSet, VeiculosViewSets, ListaVeiculosClienteViewSet
 from rest_framework import routers
 
 
@@ -11,5 +11,6 @@ router.register('veiculos', VeiculosViewSets)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('cliente/<int:pk>/veiculos/', ListaVeiculosClienteViewSet.as_view())
 ]
